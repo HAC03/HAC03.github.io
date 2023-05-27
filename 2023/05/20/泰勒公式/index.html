@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+    
+    <title>c语言例题 - eternity</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+    
+    <link rel="shortcut icon" href="https://cdn.staticaly.com/gh/fjh02/piic__bed@main/photo/cutcamera.1qpaxskwkn8g.webp" type="image/x-icon" />
+    <meta name="description" content="求最大公约数和最小公倍数12345678910111213141516171819202122#include&lt;stdio.h&gt;int main()&amp;#123;  int a &#x3D; 15,b &#x3D; 17;  int t;  if(a&lt;b)  &#x2F;&#x2F;被除数要大于除数  &amp;#123;  	t &#x3D; a;  	a &#x3D; b;  	b &#x3D;t;  &amp;#125;   int r &#x3D; a%b;  &#x2F;&#x2F;最">
+<meta property="og:type" content="article">
+<meta property="og:title" content="c语言例题">
+<meta property="og:url" content="https://www.fjh01.top/2023/05/20/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/index.html">
+<meta property="og:site_name" content="eternity">
+<meta property="og:description" content="求最大公约数和最小公倍数12345678910111213141516171819202122#include&lt;stdio.h&gt;int main()&amp;#123;  int a &#x3D; 15,b &#x3D; 17;  int t;  if(a&lt;b)  &#x2F;&#x2F;被除数要大于除数  &amp;#123;  	t &#x3D; a;  	a &#x3D; b;  	b &#x3D;t;  &amp;#125;   int r &#x3D; a%b;  &#x2F;&#x2F;最">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-05-20T05:40:59.732Z">
+<meta property="article:modified_time" content="2023-05-27T12:20:05.172Z">
+<meta property="article:author" content="fjh">
+<meta name="twitter:card" content="summary">
+    
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+    <link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1685190124693">
+    
+    <link rel="stylesheet" href="/css/style.css?v=1685190124693">
+
+    
+        
+            <link rel="stylesheet" href="/custom.css?v=1685190124693">
+        
+    
+
+    
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+
+
+    <script async src="/js/app.js?v=1685190124693"></script>
+    
+     
+
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+<body class="mdui-drawer-body-left">
+    <div id="nexmoe-background">
+        <div class="nexmoe-bg" 
+            style="background-image: url(https://cdn.staticaly.com/gh/fjh02/piic__bed@main/photo/aurora.6l0ih55e3mk0.webp)"
+        ></div>
+        <div class="mdui-appbar mdui-shadow-0">
+            <div class="mdui-toolbar">
+                <a mdui-drawer="{target: '#drawer', swipe: true}" title="menu" class="mdui-btn mdui-btn-icon mdui-ripple"><i class="mdui-icon nexmoefont icon-menu"></i></a>
+                <div class="mdui-toolbar-spacer"></div>
+                <!--<a href="javascript:;" class="mdui-btn mdui-btn-icon"><i class="mdui-icon material-icons">search</i></a>-->
+                <a href="/" title="fjh" class="mdui-btn mdui-btn-icon"><img src="https://cdn.staticaly.com/gh/fjh02/piic__bed@main/photo/加藤惠.1doposk7jdb4.webp# 网站 Logo" alt="fjh"></a>
+            </div>
+        </div>
+    </div>
+    <div id="nexmoe-header">
+        <div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="fjh">
+            <img src="https://cdn.staticaly.com/gh/fjh02/piic__bed@main/photo/加藤惠.1doposk7jdb4.webp# 网站 Logo" alt="fjh" alt="fjh">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>8</div>
+        <div><span>标签</span>0</div>
+        <div><span>分类</span>0</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="回到首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                回到首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive.html" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/PY.html" title="我的朋友">
+            <i class="mdui-list-item-icon nexmoefont icon-unorderedlist"></i>
+            <div class="mdui-list-item-content">
+                我的朋友
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/donate.html" title="给我赞助">
+            <i class="mdui-list-item-icon nexmoefont icon-coffee"></i>
+            <div class="mdui-list-item-content">
+                给我赞助
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about.html" title="关于博主">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于博主
+            </div>
+        </a>
+        
+    </div>
+    <aside id="nexmoe-sidebar">
+        
+            
+            <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+         
+            <form id="search_form" action_e="https://cn.bing.com/search?q=site:nexmoe.com" onsubmit="return search();">
+                <label><input id="search_value" name="q" type="search" placeholder="搜索"></label>
+            </form>
+         
+    </div>
+</div>
+
+
+
+
+        
+            
+            <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="tencent://message/?uin=719021034"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/386494478"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/HAC03"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/nexmoe"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://twitter.com/Zsyloveyou"
+			target="_blank"
+			mdui-tooltip="{content: 'Twitter'}"
+			style="
+				color: rgb(59, 151, 239);
+				background-color: rgba(59, 151, 239, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-twitter"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://nexmoe.com/atom.xml"
+			target="_blank"
+			mdui-tooltip="{content: 'RSS'}"
+			style="
+				color: rgb(247, 132, 34);
+				background-color: rgba(247, 132, 34, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-rss"
+			></i> </a
+		>
+	</div>
+</div>
+
+        
+            
+            
+
+        
+            
+            
+        
+            
+            
+            
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/">2023</a><span class="archive-list-count">8</span></li></ul>
+    </div>
+  </div>
+
+
+
+        
+    </aside>
+    <div class="nexmoe-copyright">
+        &copy; 2023 fjh
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        
+    </div>
+</div><!-- .nexmoe-drawer -->
+    </div>
+    <div id="nexmoe-content">
+        <div class="nexmoe-primary">
+    <div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 62.5%;"> 
+            <img src="https://cdn.staticaly.com/gh/fjh02/piic__bed@main/photo/wallhaven-1pdzlg.7lafw3at89g0.webp" alt="c语言例题" loading="lazy">
+            <h1>c语言例题</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2023年05月20日</a>
+        
+        
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h1 id="求最大公约数和最小公倍数"><a href="#求最大公约数和最小公倍数" class="headerlink" title="求最大公约数和最小公倍数"></a>求最大公约数和最小公倍数</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">  int a = 15,b = 17;</span><br><span class="line">  int t;</span><br><span class="line">  if(a&lt;b)  //被除数要大于除数</span><br><span class="line">  &#123;</span><br><span class="line">  	t = a;</span><br><span class="line">  	a = b;</span><br><span class="line">  	b =t;</span><br><span class="line">  &#125;</span><br><span class="line">   int r = a%b;  //最大公约数等于除数除以余数，知道余数为0为止</span><br><span class="line">   int n = a*b;  //为求最小公倍数准备</span><br><span class="line">   while(r!=0)</span><br><span class="line">   &#123;</span><br><span class="line">   	 a = b;  //之前的除数变为被除数</span><br><span class="line">   	 b = r;  //之前的余数变为除数</span><br><span class="line">   	 r = a%b; //再次计算知道余数为0，那么除数就是最大公约数</span><br><span class="line">   &#125;</span><br><span class="line">   printf(&quot;最大公约数是%d最小公倍数是%d&quot;,b,n/b);</span><br><span class="line">   return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="斐波那契数列"><a href="#斐波那契数列" class="headerlink" title="斐波那契数列"></a>斐波那契数列</h1><h3 id="一组数字1-1-2-3-5-8-13…-都是前两位数字相加等于第三位数"><a href="#一组数字1-1-2-3-5-8-13…-都是前两位数字相加等于第三位数" class="headerlink" title="一组数字1,1,2,3,5,8,13….都是前两位数字相加等于第三位数"></a>一组数字1,1,2,3,5,8,13….都是前两位数字相加等于第三位数</h3><h4 id="题目要求输出斐波那契前40个数字"><a href="#题目要求输出斐波那契前40个数字" class="headerlink" title="题目要求输出斐波那契前40个数字"></a>题目要求输出斐波那契前40个数字</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> 	int arr[40]=&#123;1,1&#125;;</span><br><span class="line">	printf(&quot;1 1&quot;);//输出已经知道的前2个数,注意1和1之前有空格</span><br><span class="line">	int i;</span><br><span class="line">	for(i=2;i&lt;40;i++)//i是下标，下标从2开始</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i]=arr[i-1]+arr[i-2];//前2个数相加等于第三位数</span><br><span class="line">		printf(&quot;%d  &quot;,arr[i]);</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>  
+<h2 id="如果题目要求输出第10项的话"><a href="#如果题目要求输出第10项的话" class="headerlink" title="如果题目要求输出第10项的话"></a>如果题目要求输出第10项的话</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> 	int arr[40]=&#123;1,1&#125;;</span><br><span class="line">	printf(&quot;1 1&quot;); </span><br><span class="line">	int i;</span><br><span class="line">	for(i=2;i&lt;10;i++)//i为10退出循环</span><br><span class="line">	&#123;</span><br><span class="line">		arr[i]=arr[i-1]+arr[i-2]; </span><br><span class="line">		printf(&quot;%d  &quot;,arr[i]);</span><br><span class="line">	&#125;</span><br><span class="line">    printf(&quot;\n%d&quot;,arr[i-1]);//因为第10项的下标为9，退出循环时i是10所以要减一</span><br><span class="line">	return 0;</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>  
+<h2 id="递归法，题目要求求出第10项"><a href="#递归法，题目要求求出第10项" class="headerlink" title="递归法，题目要求求出第10项"></a>递归法，题目要求求出第10项</h2>  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int f(int n)</span><br><span class="line">&#123;</span><br><span class="line">	if(n==0) //如果求输出第0项就是直接返回0</span><br><span class="line">		return 0;</span><br><span class="line">	if(n==1) //如果求输出第0项就是直接返回0</span><br><span class="line">		return 1;</span><br><span class="line">	return f(n-1)+f(n-2); </span><br><span class="line">&#125;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line"> 	int arr[10]=&#123;0,1&#125;;</span><br><span class="line"> 	printf(&quot;%d&quot;,f(10));</span><br><span class="line">	return 0;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h1 id="泰勒公式"><a href="#泰勒公式" class="headerlink" title="泰勒公式"></a>泰勒公式</h1><h3 id="首先要知道泰勒公式"><a href="#首先要知道泰勒公式" class="headerlink" title="首先要知道泰勒公式"></a>首先要知道泰勒公式</h3><h4 id="sinx≈x-3-x2F-3-x-5-x2F-5-x-7-x2F-7-x-9-x2F-9-…-计算sinx的值，直到最后一项的绝对值小于1e-5次方为止。"><a href="#sinx≈x-3-x2F-3-x-5-x2F-5-x-7-x2F-7-x-9-x2F-9-…-计算sinx的值，直到最后一项的绝对值小于1e-5次方为止。" class="headerlink" title="sinx≈x^3&#x2F;3!+x^5&#x2F;5!-x^7&#x2F;7!+x^9&#x2F;9!-….,计算sinx的值，直到最后一项的绝对值小于1e-5次方为止。"></a>sinx≈x^3&#x2F;3!+x^5&#x2F;5!-x^7&#x2F;7!+x^9&#x2F;9!-….,计算sinx的值，直到最后一项的绝对值小于1e-5次方为止。</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line">#include &lt;math.h&gt;</span><br><span class="line"> </span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">   int n=1,count=1;</span><br><span class="line">   double x;</span><br><span class="line">   double sum,term;</span><br><span class="line">   printf(&quot;Input x:&quot;);</span><br><span class="line">   scanf(&quot;%lf&quot;,&amp;x);</span><br><span class="line">   sum=x;</span><br><span class="line">   term=x;</span><br><span class="line">   do</span><br><span class="line">   &#123;</span><br><span class="line">       term=-term*x*x/((n+1)*(n+2));</span><br><span class="line">       sum=sum+term;</span><br><span class="line">       n=n+2;</span><br><span class="line">       count++;</span><br><span class="line"> </span><br><span class="line">   &#125;while(fabs(term)&gt;=1e-5);</span><br><span class="line">   printf(&quot;sin(x)=%f,count=%d\n&quot;,sum,count);</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+<h1 id="杨辉三角"><a href="#杨辉三角" class="headerlink" title="杨辉三角"></a>杨辉三角</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">1</span><br><span class="line">11</span><br><span class="line">121</span><br><span class="line">1331</span><br><span class="line">14641</span><br><span class="line">....</span><br></pre></td></tr></table></figure>
+<p>发现规律是上面一行的两数之和是外围1中的值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int arr[100][100];</span><br><span class="line"> 	int i,j;</span><br><span class="line"> 	int n = 5;</span><br><span class="line"> 	for(i=0;i&lt;n;i++)</span><br><span class="line"> 	&#123;</span><br><span class="line"> 		arr[i][0]=1; //把外围的1都赋值上</span><br><span class="line"> 		arr[i][i]=1;</span><br><span class="line">	&#125;</span><br><span class="line"> 	for(i=2;i&lt;n;i++) //i为2是因为第0行和第1行都已被赋值为1</span><br><span class="line">     	 &#123;</span><br><span class="line"> 	 	for(j=1;j&lt;i;j++)</span><br><span class="line"> 	 	&#123;</span><br><span class="line"> 	 		arr[i][j]=arr[i-1][j]+arr[i-1][j+1];</span><br><span class="line">		  &#125;</span><br><span class="line">	  &#125;</span><br><span class="line"> 	 for(int i=0;i&lt;n;i++)     //打印输出 </span><br><span class="line">	&#123;</span><br><span class="line">		for(int j=0;j&lt;=i;j++)</span><br><span class="line">		&#123;</span><br><span class="line">			printf(&quot;%d &quot;,arr[i][j]);</span><br><span class="line">		&#125;</span><br><span class="line">		printf(&quot;\n&quot;);</span><br><span class="line">	&#125;</span><br><span class="line"> </span><br><span class="line"> 	 </span><br><span class="line">&#125;</span><br><span class="line"> </span><br></pre></td></tr></table></figure>
+
+    
+  </article>
+
+  
+      
+    <div class="nexmoe-post-copyright">
+        <strong>本文作者：</strong>fjh<br>
+        <strong>本文链接：</strong><a href="https://www.fjh01.top/2023/05/20/%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F/" title="https:&#x2F;&#x2F;www.fjh01.top&#x2F;2023&#x2F;05&#x2F;20&#x2F;%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F&#x2F;" target="_blank" rel="noopener">https:&#x2F;&#x2F;www.fjh01.top&#x2F;2023&#x2F;05&#x2F;20&#x2F;%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F&#x2F;</a><br>
+        
+            <strong>版权声明：</strong>本文采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/deed.zh" target="_blank">CC BY-NC-SA 3.0 CN</a> 协议进行许可
+
+        
+    </div>
+
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1685190124666"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div>
+</div>
+        <div class="nexmoe-post-right">
+              <div class="nexmoe-fixed">
+                  <div class="nexmoe-tool"> 
+                    
+                      
+                        
+                          
+                          
+                              <button class="mdui-fab catalog" style="overflow:unset;">
+                                  <i class="nexmoefont icon-i-catalog"></i>
+                                  <div class="nexmoe-toc">
+                                      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B1%82%E6%9C%80%E5%A4%A7%E5%85%AC%E7%BA%A6%E6%95%B0%E5%92%8C%E6%9C%80%E5%B0%8F%E5%85%AC%E5%80%8D%E6%95%B0"><span class="toc-number">1.</span> <span class="toc-text">求最大公约数和最小公倍数</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E6%95%B0%E5%88%97"><span class="toc-number">2.</span> <span class="toc-text">斐波那契数列</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E7%BB%84%E6%95%B0%E5%AD%971-1-2-3-5-8-13%E2%80%A6-%E9%83%BD%E6%98%AF%E5%89%8D%E4%B8%A4%E4%BD%8D%E6%95%B0%E5%AD%97%E7%9B%B8%E5%8A%A0%E7%AD%89%E4%BA%8E%E7%AC%AC%E4%B8%89%E4%BD%8D%E6%95%B0"><span class="toc-number">2.0.1.</span> <span class="toc-text">一组数字1,1,2,3,5,8,13….都是前两位数字相加等于第三位数</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%A2%98%E7%9B%AE%E8%A6%81%E6%B1%82%E8%BE%93%E5%87%BA%E6%96%90%E6%B3%A2%E9%82%A3%E5%A5%91%E5%89%8D40%E4%B8%AA%E6%95%B0%E5%AD%97"><span class="toc-number">2.0.1.1.</span> <span class="toc-text">题目要求输出斐波那契前40个数字</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A6%82%E6%9E%9C%E9%A2%98%E7%9B%AE%E8%A6%81%E6%B1%82%E8%BE%93%E5%87%BA%E7%AC%AC10%E9%A1%B9%E7%9A%84%E8%AF%9D"><span class="toc-number">2.1.</span> <span class="toc-text">如果题目要求输出第10项的话</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%92%E5%BD%92%E6%B3%95%EF%BC%8C%E9%A2%98%E7%9B%AE%E8%A6%81%E6%B1%82%E6%B1%82%E5%87%BA%E7%AC%AC10%E9%A1%B9"><span class="toc-number">2.2.</span> <span class="toc-text">递归法，题目要求求出第10项</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">泰勒公式</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%A6%96%E5%85%88%E8%A6%81%E7%9F%A5%E9%81%93%E6%B3%B0%E5%8B%92%E5%85%AC%E5%BC%8F"><span class="toc-number">3.0.1.</span> <span class="toc-text">首先要知道泰勒公式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#sinx%E2%89%88x-3-x2F-3-x-5-x2F-5-x-7-x2F-7-x-9-x2F-9-%E2%80%A6-%E8%AE%A1%E7%AE%97sinx%E7%9A%84%E5%80%BC%EF%BC%8C%E7%9B%B4%E5%88%B0%E6%9C%80%E5%90%8E%E4%B8%80%E9%A1%B9%E7%9A%84%E7%BB%9D%E5%AF%B9%E5%80%BC%E5%B0%8F%E4%BA%8E1e-5%E6%AC%A1%E6%96%B9%E4%B8%BA%E6%AD%A2%E3%80%82"><span class="toc-number">3.0.1.1.</span> <span class="toc-text">sinx≈x^3&#x2F;3!+x^5&#x2F;5!-x^7&#x2F;7!+x^9&#x2F;9!-….,计算sinx的值，直到最后一项的绝对值小于1e-5次方为止。</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9D%A8%E8%BE%89%E4%B8%89%E8%A7%92"><span class="toc-number">4.</span> <span class="toc-text">杨辉三角</span></a></li></ol>
+                                  </div>
+                              </button>
+                          
+                          
+                      
+                    
+                      <a href="#nexmoe-content" class="toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+                  </div>
+              </div>
+            </div>
+    </div>
+    <div id="nexmoe-search-space">
+	<div class="search-container">
+		<div class="search-header">
+			<div class="search-input-container">
+				<input
+					class="search-input"
+					type="text"
+					placeholder="搜索"
+					oninput="sinput();"
+				/>
+			</div>
+			<a class="search-close" onclick="sclose();">×</a>
+		</div>
+		<div class="search-body"></div>
+	</div>
+</div>
+
+    
+    
+</body>
+
+</html>
